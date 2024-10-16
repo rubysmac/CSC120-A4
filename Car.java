@@ -87,8 +87,9 @@ public class Car {
         System.out.println("Current # of passengers in this car: " + currentPassengers.size());
         if (currentPassengers.size() != 0) {
             System.out.println("Below is the roster of this car's passengers: ");
-            for (Passenger i : currentPassengers)
+            for (Passenger i : currentPassengers) {
                 System.out.println(i);
+            }
         } else {
             System.out.println("This car is EMPTY.");
         }

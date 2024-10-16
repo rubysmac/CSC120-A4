@@ -57,9 +57,9 @@ public class Engine {
      * @return true if current fuel level is above 0, otherwise false
      */
     public boolean go() {
-        this.currentFuelLevel = this.currentFuelLevel - 10;
-        System.out.println("current fuel level: " + this.currentFuelLevel);
         if (this.currentFuelLevel > 0) {
+            this.currentFuelLevel = this.currentFuelLevel - 10;
+            System.out.println("current fuel level: " + this.currentFuelLevel);
             return true;
         } else {
             return false;
