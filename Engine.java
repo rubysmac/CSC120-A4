@@ -12,6 +12,15 @@ public class Engine {
     // Accessors
 
     /**
+     * Returns the fuel type.
+     * 
+     * @return the fuel type
+     */
+    public FuelType getFuelType() {
+        return this.f;
+    }
+
+    /**
      * Returns the current fuel level.
      * 
      * @return the current fuel level
@@ -57,11 +66,12 @@ public class Engine {
      * @return true if current fuel level is above 0, otherwise false
      */
     public boolean go() {
-        if (this.currentFuelLevel > 0) {
+        if (this.currentFuelLevel - 10 > 0) {
             this.currentFuelLevel = this.currentFuelLevel - 10;
             System.out.println("current fuel level: " + this.currentFuelLevel);
             return true;
         } else {
+            System.out.println("There is not enough fuel left");
             return false;
         }
     }
